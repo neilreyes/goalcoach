@@ -9,9 +9,9 @@ import SignUp from './components/SignUp';
 
 firebaseApp.auth().onAuthStateChanged(user=>{
     if(user){
-        console.log('t', user);
+        console.log('User has sign in or up', user);
     } else {
-        console.log('f', user);
+        console.log('False: ', user);
     }
 });
 

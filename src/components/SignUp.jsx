@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router';
 import { firebaseApp } from '../firebase';
 
 class SignUp extends Component{
@@ -40,19 +41,19 @@ class SignUp extends Component{
         return (
             <div className="container">
                 <h2>Sign Up</h2>
-                <div className="form-inline">
+                <div>
                     <div className="form-group">
                         <input 
                             className="form-control"
                             type="text"
-                            placeholder="email"
+                            placeholder="Email"
                             name="email"
                             onChange={this.handleInputChange}
                         />
                         <input 
                             className="form-control"
                             type="password"
-                            placeholder="password"
+                            placeholder="Password"
                             name="password"
                             onChange={this.handleInputChange}
                         />
@@ -64,6 +65,7 @@ class SignUp extends Component{
                             Sign Up
                         </button>
                     </div>
+                    <div><Link to={'/signin'}>Already a user? Sign in instead</Link></div>
                     <div>{this.state.error.message}</div>
                 </div>
             </div>
