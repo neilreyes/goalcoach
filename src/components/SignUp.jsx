@@ -9,7 +9,7 @@ class SignUp extends Component{
         this.handleSubmit = this.handleSubmit.bind(this);
 
         this.state = {
-            email:'',
+            email: '',
             password: '',
             error: {
                 message: '',
@@ -33,7 +33,7 @@ class SignUp extends Component{
             .catch(error=>{
                 console.log('error: ', error);
                 this.setState({ error });
-            })
+            });
     }
 
     render(){
