@@ -12,4 +12,6 @@ const config = {
 
 const firebaseApp = firebase.initializeApp(config);
 
-export { firebaseApp }
+const goalRef = firebase.database().ref('goals');
+
+export { firebaseApp, goalRef }
