@@ -26,6 +26,8 @@ const store = createStore(reducer);
 firebaseApp.auth().onAuthStateChanged(user=>{
     if(user){
         console.log('User has sign in or up', user);
+        const { email } = user;
+        store.dispatch(logUser(email))
         browserHistory.push('/app');
     } else {
         console.log('User has signed out or still need to sign in.: ');
